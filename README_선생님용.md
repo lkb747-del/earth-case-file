@@ -1,5 +1,15 @@
 # 지구촌 사건 파일 — 선생님용 안내
 
+## 🌐 수업 날 쓰는 주소
+| 누가 | 주소 |
+|---|---|
+| 학생 (팀 기기 7대) | **https://lkb747-del.github.io/earth-case-file/** (QR: `assets/student_qr.png`) |
+| 선생님 (화면 공유) | https://lkb747-del.github.io/earth-case-file/teacher/ |
+| 참관 실습생 | https://lkb747-del.github.io/earth-case-file/view/?code=수업코드 |
+
+- 교사 화면 **도입 / 활동 안내** 단계 오른쪽에 학생 입장 QR이 있어요. 누르면 크게 떠서 화면 공유로 원격 학교도 찍을 수 있어요.
+- 코드를 고친 뒤 인터넷 주소에 반영하려면 Claude에게 "배포해 줘"라고 하면 돼요. (1분쯤 뒤 반영)
+
 ## 지금 바로 시험해 보기 (데모 모드)
 1. `로컬에서_열기.bat` 를 더블클릭합니다. 브라우저에 탭 두 개가 열립니다.
    - 교사 화면: `http://localhost:8123/teacher/` (비밀번호: `js/config.js`의 `teacherPassword`, 처음 값 `2026`)
