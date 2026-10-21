@@ -354,6 +354,8 @@ function viewSentences() {
   const c = myCase();
   const t = team();
   const s = sentencesOf(t);
+  // 새로고침 직후처럼 학생이 빈칸을 직접 고르지 않았으면 첫 번째 빈 칸부터 보여 줍니다
+  if (!ui.blankPicked) ui.blank = BLANKS.find((b) => !s[b]) || ui.blank;
   const f = ui.blank;
   const choices = seededShuffle(c.sentenceChoices[f], teamId + f);
   const done = s.where && s.problem && s.link;
@@ -391,6 +393,7 @@ function chooseBlank(field, value, custom) {
   const flags = { where: false, problem: false, link: false, ...(cur.customFlags || {}), [field]: custom };
   const next = { where: cur.where || '', problem: cur.problem || '', link: cur.link || '', [field]: value, customFlags: flags };
   ui.custom = null;
+  ui.blankPicked = false;
   const empty = BLANKS.find((b) => !next[b]);
   if (empty) ui.blank = empty;
   update({ sentences: next });
@@ -510,7 +513,7 @@ document.addEventListener('click', async (e) => {
   if (d.team) { enterRoom(ui.joinCode, d.team); return; }
   if (d.card) return toggleCard(d.card);
   if (d.main) return update({ mainCause: d.main });
-  if (d.blank) { ui.blank = d.blank; ui.custom = null; return rerender(); }
+  if (d.blank) { ui.blank = d.blank; ui.blankPicked = true; ui.custom = null; return rerender(); }
   if (d.chip) return chooseBlank(ui.blank, d.chip, false);
   if (d.to) { ui.link.to = Number(d.to); return rerender(); }
   if (d.word) { ui.link.word = d.word; return rerender(); }
