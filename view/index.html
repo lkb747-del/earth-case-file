@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>참관용 지도 · 지구촌 사건 파일</title>
+  <link rel="icon" href="../assets/earth_mascot.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/teacher.css">
+  <style>
+    .v-ask { margin: auto; padding: 28px; display: flex; flex-direction: column; gap: 12px; align-items: center; }
+    .v-ask input { font: inherit; font-size: 28px; width: 180px; text-align: center; height: 56px; border-radius: 12px; border: 2px solid var(--navy); }
+    @media (max-width: 900px) {
+      body { overflow: auto; height: auto; }
+      .t-main { flex-direction: column; }
+      .side { width: 100%; }
+      .map-area { min-height: 52vw; }
+    }
+  </style>
+  <script>
+    // html 파일을 더블클릭해서 열면(file://) 동작하지 않으므로 안내를 보여 줍니다
+    if (location.protocol === "file:") addEventListener("DOMContentLoaded", function () {
+      document.body.innerHTML = "<div style=\"max-width:640px;margin:80px auto;padding:28px;background:#FFFDF7;border-radius:16px;font:20px/1.6 sans-serif;color:#1F3B4D\"><h2>이 파일은 더블클릭으로는 열리지 않아요</h2><p>폴더 안의 <b>로컬에서_열기.bat</b> 을 더블클릭해 주세요.<br>(인터넷 주소로 올린 뒤에는 그 주소로 열면 돼요.)</p></div>";
+    });
+  </script>
+</head>
+<body>
+  <header class="t-top">
+    <div class="brand">🕵️ 지구촌 사건 파일 <small style="font-weight:600;opacity:.7">· 참관용</small></div>
+    <div class="code-box">수업 코드 <b id="codeText">----</b></div>
+    <div class="phases"><span class="phase on" id="phaseText">-</span></div>
+    <span id="modeBadge"></span>
+  </header>
+  <main class="t-main" id="main">
+    <section class="map-area" id="mapArea"><div id="map"></div><div id="overlay"></div></section>
+    <aside class="side" id="side"></aside>
+  </main>
+  <script type="module" src="../js/view.js"></script>
+</body>
+</html>

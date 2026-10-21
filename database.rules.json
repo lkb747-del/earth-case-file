@@ -1,0 +1,66 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "rooms": {
+      "$code": {
+        ".read": "auth != null && $code.matches(/^[0-9][0-9][0-9][0-9]$/)",
+        ".write": "auth != null && $code.matches(/^[0-9][0-9][0-9][0-9]$/)",
+        "state": {
+          "phase": { ".validate": "newData.isString() && newData.val().matches(/^(intro|guide|investigate|tour|colors|links|wrap)$/)" },
+          "timerEndsAt": { ".validate": "newData.isNumber()" },
+          "timerPaused": { ".validate": "newData.isBoolean()" },
+          "timerRemain": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() < 36000000" },
+          "tourTeamId": { ".validate": "newData.isString() && (newData.val() === '' || newData.val().matches(/^(jeonggok|yongdeok|uiryeong[1-5])$/))" },
+          "tourEndsAt": { ".validate": "newData.isNumber()" },
+          "revealStep": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 3" },
+          "linksOpen": { ".validate": "newData.isBoolean()" },
+          "colorFocus": { ".validate": "newData.isString() && (newData.val() === '' || newData.val().matches(/^(red|orange|purple)$/))" },
+          "createdAt": { ".validate": "newData.isNumber()" },
+          "$other": { ".validate": false }
+        },
+        "teams": {
+          "$teamId": {
+            ".validate": "$teamId.matches(/^(jeonggok|yongdeok|uiryeong[1-5])$/)",
+            "online": { ".validate": "newData.isBoolean()" },
+            "lastSeen": { ".validate": "newData.isNumber()" },
+            "stage": { ".validate": "newData.isNumber() && newData.val() >= 1 && newData.val() <= 5" },
+            "readDone": { ".validate": "newData.isBoolean()" },
+            "cardIds": {
+              "$i": { ".validate": "$i.matches(/^[01]$/) && newData.isString() && newData.val().matches(/^c([1-9]|1[0-5])$/)" }
+            },
+            "mainCause": { ".validate": "newData.isString() && (newData.val() === '' || newData.val().matches(/^(red|orange|purple)$/))" },
+            "sentences": {
+              "where": { ".validate": "newData.isString() && newData.val().length <= 60" },
+              "problem": { ".validate": "newData.isString() && newData.val().length <= 60" },
+              "link": { ".validate": "newData.isString() && newData.val().length <= 60" },
+              "customFlags": {
+                "where": { ".validate": "newData.isBoolean()" },
+                "problem": { ".validate": "newData.isBoolean()" },
+                "link": { ".validate": "newData.isBoolean()" },
+                "$other": { ".validate": false }
+              },
+              "$other": { ".validate": false }
+            },
+            "pinnedAt": { ".validate": "newData.isNumber()" },
+            "$other": { ".validate": false }
+          }
+        },
+        "links": {
+          "$linkId": {
+            ".validate": "newData.hasChildren(['fromTeamId', 'fromCaseNo', 'toCaseNo', 'word', 'reason', 'crossSchool', 'at'])",
+            "fromTeamId": { ".validate": "newData.isString() && newData.val().matches(/^(jeonggok|yongdeok|uiryeong[1-5])$/)" },
+            "fromCaseNo": { ".validate": "newData.isNumber() && newData.val() >= 1 && newData.val() <= 7" },
+            "toCaseNo": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 7" },
+            "word": { ".validate": "newData.isString() && newData.val().length <= 10" },
+            "reason": { ".validate": "newData.isString() && newData.val().length <= 60" },
+            "crossSchool": { ".validate": "newData.isBoolean()" },
+            "at": { ".validate": "newData.isNumber()" },
+            "$other": { ".validate": false }
+          }
+        },
+        "$other": { ".validate": false }
+      }
+    }
+  }
+}

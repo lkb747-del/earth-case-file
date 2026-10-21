@@ -1,0 +1,6 @@
+# 배포하지 않는 것 (개발용 메모, 선생님 수업 자료)
+CLAUDE.md
+.claude/
+reference/
+Thumbs.db
+desktop.ini

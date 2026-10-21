@@ -1,0 +1,156 @@
+/* 공통 스타일 — "탐정의 사건 파일" 테마 */
+:root {
+  --navy: #1F3B4D;
+  --navy-2: #2c5068;
+  --kraft: #EBD7AE;
+  --kraft-dark: #c9ab74;
+  --paper: #FFFDF7;
+  --teal: #2A9D8F;
+  --gold: #B7791F;
+  --yellow: #FFE97A;
+  --red: #E63946;
+  --orange: #F08C2E;
+  --purple: #7A57A6;
+  --hl-problem-bg: #DCEBFA;
+  --hl-problem-fg: #1D4E80;
+  --hl-cause-bg: #FFF0A0;
+  --hl-cause-fg: #7A5300;
+  --ink: #23303a;
+  --muted: #6b7680;
+  --line: #e2d6bd;
+  --radius: 14px;
+  --shadow: 0 3px 0 rgba(31, 59, 77, .12), 0 8px 24px rgba(31, 59, 77, .10);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  font-family: 'Pretendard Variable', Pretendard, 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif;
+  font-size: 18px;
+  color: var(--ink);
+  background: #f3ead6 radial-gradient(circle at 20% 10%, #f8f0de 0, #efe3c7 100%);
+  -webkit-tap-highlight-color: transparent;
+  word-break: keep-all;
+}
+button { font: inherit; color: inherit; cursor: pointer; }
+h1, h2, h3, p { margin: 0; }
+
+.btn {
+  min-height: 48px;
+  padding: 10px 22px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: 0 3px 0 #10232f;
+  transition: transform .08s, filter .15s;
+}
+.btn:hover { filter: brightness(1.12); }
+.btn:active { transform: translateY(2px); box-shadow: 0 1px 0 #10232f; }
+.btn:disabled { opacity: .4; cursor: not-allowed; transform: none; }
+.btn.teal { background: var(--teal); box-shadow: 0 3px 0 #1c6d63; }
+.btn.gold { background: var(--gold); box-shadow: 0 3px 0 #7d5212; }
+.btn.red { background: var(--red); box-shadow: 0 3px 0 #9b1f29; }
+.btn.ghost { background: #fff; color: var(--navy); box-shadow: inset 0 0 0 2px var(--navy); }
+.btn.big { min-height: 64px; font-size: 22px; padding: 12px 32px; }
+
+.badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 14px; font-weight: 700; }
+.badge.demo { background: var(--yellow); color: #6b5300; }
+.badge.live { background: #d5f2ee; color: #145e55; }
+
+.paper {
+  background: var(--paper);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hl-problem { background: var(--hl-problem-bg); color: var(--hl-problem-fg); border-radius: 4px; padding: 1px 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.hl-cause { background: var(--hl-cause-bg); color: var(--hl-cause-fg); border-radius: 4px; padding: 1px 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+
+.stamp {
+  display: inline-block;
+  border: 3px solid var(--red);
+  color: var(--red);
+  padding: 2px 12px;
+  border-radius: 8px;
+  font-weight: 900;
+  transform: rotate(-8deg);
+  letter-spacing: 2px;
+  opacity: .85;
+}
+
+/* ───── 세계지도 ───── */
+.map { position: relative; user-select: none; }
+.map-img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.map-links { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.map-links path { fill: none; stroke: var(--teal); stroke-width: 9; stroke-linecap: round; opacity: .9; }
+.map-links .cross path { stroke: var(--gold); stroke-width: 12; }
+.map-links text { font-size: 46px; font-weight: 800; text-anchor: middle; dominant-baseline: middle; fill: var(--navy); paint-order: stroke; stroke: #fff; stroke-width: 12px; stroke-linejoin: round; }
+.map-pins { position: absolute; inset: 0; }
+.pin {
+  --pin: var(--navy);
+  position: absolute;
+  transform: translate(-50%, -100%);
+  background: none; border: 0; padding: 0;
+  display: flex; flex-direction: column; align-items: center;
+  transition: opacity .3s, filter .3s;
+  z-index: 2;
+}
+.pin-head {
+  width: 2.1em; height: 2.1em;
+  background: var(--pin);
+  border: 3px solid #fff;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  box-shadow: 0 3px 6px rgba(0,0,0,.35);
+  display: grid; place-items: center;
+  color: #fff; font-size: 1em;
+  order: 2;
+}
+.pin-label {
+  order: 1;
+  background: rgba(255,255,255,.95);
+  border: 2px solid var(--pin);
+  border-radius: 8px;
+  padding: 1px 8px;
+  font-size: .78em; font-weight: 800; line-height: 1.2;
+  white-space: nowrap; text-align: center;
+  margin-bottom: 4px;
+  color: var(--navy);
+}
+.pin-label small { display: block; font-size: .8em; font-weight: 600; color: var(--muted); }
+.pin.star { --pin: var(--gold); }
+.pin.star .pin-head { border-radius: 50%; transform: none; font-size: 1.2em; }
+.pin.dim { opacity: .18; filter: grayscale(1); }
+.pin.hl .pin-head { animation: pulse 1s ease-in-out infinite; }
+.pin.drop { animation: drop .7s cubic-bezier(.3,1.6,.5,1) both; }
+@keyframes drop { 0% { transform: translate(-50%, -260%); opacity: 0; } 60% { opacity: 1; } 100% { transform: translate(-50%, -100%); } }
+@keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(255,233,122,.9); } 50% { box-shadow: 0 0 0 14px rgba(255,233,122,0); } }
+
+/* ───── 알림 ───── */
+#toast {
+  position: fixed; left: 50%; bottom: 28px; transform: translate(-50%, 40px);
+  background: var(--navy); color: #fff; padding: 14px 26px; border-radius: 14px;
+  font-weight: 700; opacity: 0; transition: .25s; z-index: 100; pointer-events: none;
+  max-width: 90vw; text-align: center;
+}
+#toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+#connBanner { position: fixed; inset: 0; background: rgba(20, 35, 45, .55); z-index: 90; display: grid; place-items: center; padding: 16px; }
+#connBanner .cb-box { background: var(--paper); border-radius: 18px; padding: 24px; display: flex; gap: 24px; align-items: center; max-width: 720px; box-shadow: var(--shadow); }
+#connBanner .cb-text b { font-size: 26px; color: var(--navy); }
+#connBanner .cb-text p { margin: 10px 0 16px; line-height: 1.5; }
+#connBanner .cb-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+#connBanner figure { margin: 0; text-align: center; }
+#connBanner img { width: 180px; height: 180px; border-radius: 10px; border: 4px solid #fff; }
+#connBanner figcaption { font-size: 15px; color: var(--muted); }
+
+.modal-back { position: fixed; inset: 0; background: rgba(20,35,45,.5); display: grid; place-items: center; z-index: 50; padding: 16px; }
+.modal { background: var(--paper); border-radius: 18px; padding: 24px 28px; max-width: min(900px, 96vw); max-height: 92vh; overflow: auto; box-shadow: var(--shadow); position: relative; }
+.modal .close { position: absolute; top: 10px; right: 12px; background: none; border: 0; font-size: 28px; width: 48px; height: 48px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

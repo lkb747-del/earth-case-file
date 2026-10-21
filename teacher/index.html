@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>교사 대시보드 · 지구촌 사건 파일</title>
+  <link rel="icon" href="../assets/earth_mascot.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/teacher.css">
+  <link rel="stylesheet" href="../css/intro.css">
+  <link rel="stylesheet" href="../css/case-anim.css">
+  <script>
+    // html 파일을 더블클릭해서 열면(file://) 동작하지 않으므로 안내를 보여 줍니다
+    if (location.protocol === "file:") addEventListener("DOMContentLoaded", function () {
+      document.body.innerHTML = "<div style=\"max-width:640px;margin:80px auto;padding:28px;background:#FFFDF7;border-radius:16px;font:20px/1.6 sans-serif;color:#1F3B4D\"><h2>이 파일은 더블클릭으로는 열리지 않아요</h2><p>폴더 안의 <b>로컬에서_열기.bat</b> 을 더블클릭해 주세요.<br>(인터넷 주소로 올린 뒤에는 그 주소로 열면 돼요.)</p></div>";
+    });
+  </script>
+</head>
+<body>
+  <div id="gate" class="gate" hidden>
+    <form class="paper gate-box" id="gateForm">
+      <img src="../assets/earth_mascot.png" alt="" width="110">
+      <h1>교사 대시보드</h1>
+      <p>선생님 비밀번호를 넣어 주세요.</p>
+      <input id="pw" type="password" autocomplete="off" inputmode="numeric">
+      <button class="btn big" type="submit">들어가기</button>
+      <a href="../">학생 화면으로 ▶</a>
+    </form>
+  </div>
+
+  <header class="t-top" id="top" hidden>
+    <div class="brand">🕵️ 지구촌 사건 파일</div>
+    <div class="code-box">수업 코드 <b id="codeText">----</b></div>
+    <nav class="phases" id="phases"></nav>
+    <div class="timer-box">
+      <span id="timerText" class="timer">0:00</span>
+      <button class="tbtn" data-act="timerToggle" id="timerToggle" title="시작/일시정지">▶</button>
+      <button class="tbtn" data-act="plus1" title="1분 더">+1분</button>
+      <button class="tbtn" data-act="timerReset" title="처음으로">↺</button>
+    </div>
+    <span id="modeBadge"></span>
+    <button class="tbtn menu" data-act="admin" title="관리">⚙️</button>
+  </header>
+
+  <main class="t-main" id="main" hidden>
+    <section class="map-area" id="mapArea">
+      <div id="map"></div>
+      <div id="overlay"></div>
+    </section>
+    <aside class="side" id="side"></aside>
+  </main>
+
+  <script type="module" src="../js/teacher.js"></script>
+</body>
+</html>

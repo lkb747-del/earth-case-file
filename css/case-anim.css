@@ -1,0 +1,95 @@
+/* 사건 파일 장면 애니메이션 — 상자 너비에 맞춰 크기가 변합니다 (cqw 단위) */
+.ca {
+  position: relative; width: 100%; aspect-ratio: 2 / 1; overflow: hidden;
+  border-radius: 16px; container-type: inline-size;
+  background: linear-gradient(#bfe6ff, #eef8e4);
+  box-shadow: inset 0 0 0 3px rgba(31,59,77,.15);
+}
+.ca .e { position: absolute; font-size: 6cqw; line-height: 1; transform: translate(-50%, -50%); }
+.ca * { animation-fill-mode: both; }
+
+/* 공용 움직임 */
+.ca .pop { animation: ca-pop .5s var(--d) cubic-bezier(.3,1.6,.5,1) both; }
+.ca .out { animation: ca-out .8s var(--d) forwards; }
+@keyframes ca-pop { from { opacity: 0; scale: 0; } to { opacity: 1; scale: 1; } }
+@keyframes ca-out { to { opacity: 0; scale: .5; } }
+.ca .glow { animation: ca-pop .5s var(--d) both, ca-glow 1.2s calc(var(--d) + .5s) ease-in-out infinite alternate; }
+@keyframes ca-glow { to { filter: drop-shadow(0 0 2cqw #ffd84a); scale: 1.12; } }
+.ca .ground { position: absolute; left: 0; right: 0; bottom: 0; height: 26%; background: #8fcf72; }
+.ca .ground.sand { background: #e3c48a; }
+
+/* 1. 산호 백화 */
+.ca-1 { background: linear-gradient(#72d2f0, #1d6fa5); }
+.ca-1 .heat { position: absolute; inset: 0; background: linear-gradient(#ff8a4c, rgba(255,90,58,0) 80%); opacity: 0; animation: ca-heat 3s 1s forwards; }
+@keyframes ca-heat { to { opacity: .6; } }
+.ca-1 .coral { position: absolute; bottom: 0; width: 4.5cqw; background: var(--cc); border-radius: 2.2cqw 2.2cqw .4cqw .4cqw; transform: translateX(-50%); animation: ca-bleach 1.6s var(--d) forwards; }
+.ca-1 .coral::before, .ca-1 .coral::after { content: ''; position: absolute; bottom: 35%; width: 3cqw; height: 8cqw; background: inherit; border-radius: 1.5cqw; }
+.ca-1 .coral::before { left: -2.6cqw; transform: rotate(-32deg); }
+.ca-1 .coral::after { right: -2.6cqw; transform: rotate(32deg); }
+@keyframes ca-bleach { to { background: #f6f3ec; } }
+.ca-1 .thermo { position: absolute; right: 5.5%; top: 24%; width: 2.6cqw; height: 26cqw; background: #fff; border-radius: 2cqw; overflow: hidden; border: .4cqw solid #fff; }
+.ca-1 .thermo span { position: absolute; left: 0; right: 0; bottom: 0; height: 18%; background: #e63946; border-radius: 2cqw; animation: ca-thermo 3s .8s ease-in forwards; }
+@keyframes ca-thermo { to { height: 95%; } }
+.ca-1 .swim { animation: ca-swim var(--dur) var(--d) linear infinite, ca-dim 1s 5s forwards; }
+@keyframes ca-swim { from { left: 110%; } to { left: -10%; } }
+@keyframes ca-dim { to { opacity: .2; } }
+
+/* 2. 꿀벌 */
+.ca-2 .hive { position: absolute; left: 8%; top: 40%; width: 9cqw; height: 11cqw; background: repeating-linear-gradient(#f2b632 0 2cqw, #d99a1e 2cqw 2.6cqw); border-radius: 4.5cqw 4.5cqw 1cqw 1cqw; }
+.ca-2 .hive::after { content: ''; position: absolute; left: 50%; bottom: 2cqw; width: 2.4cqw; height: 2.4cqw; margin-left: -1.2cqw; background: #4a3410; border-radius: 50%; }
+.ca-2 .bee { font-size: 4.5cqw; animation: ca-buzz .35s linear infinite alternate, ca-flyoff 1.8s var(--d) ease-in forwards; }
+@keyframes ca-buzz { from { rotate: -12deg; } to { rotate: 12deg; } }
+@keyframes ca-flyoff { 0% { translate: 0 0; opacity: 1; } 100% { translate: 60cqw -40cqw; opacity: 0; } }
+.ca-2 .shrink { animation: ca-shrink 1.2s var(--d) forwards; }
+@keyframes ca-shrink { to { scale: .45; opacity: .35; filter: grayscale(1); } }
+
+/* 3. 열대 우림 */
+.ca-3 .smoke-sky { position: absolute; inset: 0; background: #6f6f6f; opacity: 0; animation: ca-smokesky 3s 2s forwards; }
+@keyframes ca-smokesky { to { opacity: .45; } }
+.ca-3 .e { font-size: 8cqw; }
+.ca-3 .burn { animation: ca-burn 1.4s calc(var(--d) + .5s) forwards; }
+@keyframes ca-burn { to { filter: grayscale(1) brightness(.45); opacity: .35; scale: .8; } }
+.ca-3 .fire { font-size: 6cqw; opacity: 0; animation: ca-fire 2.2s var(--d) forwards; }
+@keyframes ca-fire { 0% { opacity: 0; scale: .3; } 20% { opacity: 1; scale: 1.2; } 70% { opacity: 1; scale: 1; } 100% { opacity: 0; scale: .6; } }
+.ca-3 .smoke { position: absolute; top: 60%; width: 8cqw; height: 8cqw; margin-left: -4cqw; border-radius: 50%; background: rgba(90,90,90,.55); filter: blur(1cqw); opacity: 0; animation: ca-rise-smoke 3s var(--d) ease-out infinite; }
+@keyframes ca-rise-smoke { 0% { opacity: 0; translate: 0 0; scale: .5; } 30% { opacity: .9; } 100% { opacity: 0; translate: -4cqw -26cqw; scale: 1.8; } }
+.ca-3 .pop { font-size: 6cqw; }
+
+/* 4. 전쟁 난민 */
+.ca-4 { background: linear-gradient(#ffcf9a, #9aa7bd); }
+.ca-4 .e { font-size: 7cqw; }
+.ca-4 .break { animation: ca-break 1s var(--d) forwards; }
+@keyframes ca-break { 0%, 100% { rotate: 0deg; } 20% { rotate: -6deg; } 40% { rotate: 6deg; } 60% { rotate: -4deg; } 100% { filter: grayscale(1) brightness(.7); } }
+.ca-4 .walk { font-size: 5.5cqw; scale: -1 1; opacity: 0; animation: ca-walk 3.6s var(--d) linear forwards; }
+@keyframes ca-walk { 0% { left: 30%; opacity: 0; } 10% { opacity: 1; } 100% { left: 74%; opacity: 1; } }
+
+/* 5. 해양 쓰레기 */
+.ca-5 { background: linear-gradient(#80d4f0, #1b6a9e); }
+.ca-5 .vortex { position: absolute; left: 50%; top: 50%; width: 30cqw; height: 30cqw; margin: -15cqw 0 0 -15cqw; border-radius: 50%; border: .6cqw dashed rgba(255,255,255,.6); opacity: 0; animation: ca-pop .6s .2s forwards, ca-spin 6s linear infinite; }
+@keyframes ca-spin { to { rotate: 360deg; } }
+.ca-5 .drift { font-size: 5cqw; animation: ca-drift 2.2s var(--d) ease-out both, ca-spin 5s calc(var(--d) + 2.2s) linear infinite; }
+@keyframes ca-drift { from { left: var(--x0); top: var(--y0); } to { left: var(--x1); top: var(--y1); } }
+.ca-5 .turtle { font-size: 7cqw; animation: ca-turtle 2.4s var(--d) ease-out both; }
+@keyframes ca-turtle { from { left: 110%; } to { left: 74%; } }
+
+/* 6. 사막화 · 황사 */
+.ca-6 .steppe { position: absolute; left: 0; right: 0; bottom: 0; height: 45%; background: #8fcf72; animation: ca-desert 2.4s 2.4s forwards; }
+@keyframes ca-desert { to { background: #dcb66c; } }
+.ca-6 .e { font-size: 5cqw; }
+.ca-6 .dust { position: absolute; left: -20%; width: 22cqw; height: 7cqw; border-radius: 50%; background: rgba(205,160,90,.75); filter: blur(1.4cqw); opacity: 0; animation: ca-dust 2.4s var(--d) ease-in infinite; }
+@keyframes ca-dust { from { left: -25%; opacity: 0; } 20% { opacity: 1; } 80% { opacity: .85; } to { left: 95%; opacity: 0; } }
+.ca-6 .label { position: absolute; right: 3%; top: 16%; font-size: 3.4cqw; font-weight: 900; color: #fff; background: #1F3B4D; padding: .6cqw 1.6cqw; border-radius: 1cqw; animation: ca-pop .5s var(--d) both; }
+
+/* 7. 전쟁과 식량 */
+.ca-7 .field { position: absolute; left: 0; width: 72%; bottom: 0; height: 42%; background: #f2c94c; }
+.ca-7 .sea { position: absolute; right: 0; width: 28%; bottom: 0; height: 42%; background: #4aa3d8; }
+.ca-7 .sway { font-size: 7cqw; transform-origin: bottom; animation: ca-sway 1.4s var(--d) ease-in-out infinite alternate; }
+@keyframes ca-sway { from { rotate: -8deg; } to { rotate: 8deg; } }
+.ca-7 .bob { font-size: 8cqw; animation: ca-bob 1.6s ease-in-out infinite alternate; }
+@keyframes ca-bob { to { translate: 0 -1.2cqw; } }
+.ca-7 .box { font-size: 4.5cqw; animation: ca-box 1.8s var(--d) ease-out both; }
+@keyframes ca-box { from { left: 20%; opacity: 0; } 15% { opacity: 1; } to { left: 58%; } }
+.ca-7 .rise { font-size: 4cqw; animation: ca-pop .4s var(--d) both, ca-up 1s calc(var(--d) + .4s) ease-in-out infinite alternate; }
+@keyframes ca-up { to { translate: 0 -2.5cqw; } }
+
+@media (prefers-reduced-motion: reduce) { .ca * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }

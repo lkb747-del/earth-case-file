@@ -1,0 +1,110 @@
+/* 도입 오프닝 애니메이션 — 짧고 가벼운 CSS 애니메이션만 사용 */
+.intro {
+  position: fixed; inset: 0; z-index: 80; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 40%, #2c5068 0%, #1F3B4D 55%, #12242f 100%);
+  color: #fff; animation: io-fade .4s ease-out;
+}
+.intro.out { animation: io-fade .4s ease-in reverse forwards; }
+.intro.paused * { animation-play-state: paused !important; }
+@keyframes io-fade { from { opacity: 0; } }
+
+.io-stars { position: absolute; inset: 0; opacity: .55;
+  background-image:
+    radial-gradient(2px 2px at 10% 20%, #fff 50%, transparent 51%), radial-gradient(2px 2px at 30% 70%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 55% 15%, #fff 50%, transparent 51%), radial-gradient(2px 2px at 75% 60%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 90% 25%, #fff 50%, transparent 51%), radial-gradient(1.5px 1.5px at 20% 90%, #fff 50%, transparent 51%),
+    radial-gradient(2px 2px at 65% 88%, #fff 50%, transparent 51%), radial-gradient(1.5px 1.5px at 45% 45%, #fff 50%, transparent 51%);
+  animation: io-twinkle 3s ease-in-out infinite alternate; }
+@keyframes io-twinkle { to { opacity: .25; } }
+
+.io-stage { position: absolute; inset: 0 0 4.5rem; cursor: pointer; }
+.io-scene { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; animation: io-fade .35s ease-out; }
+
+.io-pop { opacity: 0; animation: io-pop .5s cubic-bezier(.3,1.5,.5,1) forwards; }
+@keyframes io-pop { from { opacity: 0; transform: scale(.7) translateY(12px); } to { opacity: 1; transform: none; } }
+
+/* ① 어스 */
+.io-mascot { width: 22rem; filter: drop-shadow(0 1rem 2rem rgba(0,0,0,.35)); }
+.io-enter { animation: io-enter 1s cubic-bezier(.3,1.4,.5,1) both, io-bob 2.4s 1s ease-in-out infinite; }
+@keyframes io-enter { from { transform: translateY(70vh) rotate(-20deg); } to { transform: none; } }
+@keyframes io-bob { 50% { transform: translateY(-1rem); } }
+.io-bubble {
+  position: relative; margin-left: 2rem; max-width: 30rem;
+  background: var(--paper); color: var(--navy); border-radius: 1.5rem; padding: 1.4rem 1.8rem;
+  font-size: 2.2rem; font-weight: 800; line-height: 1.4; box-shadow: 0 .6rem 0 rgba(0,0,0,.2);
+}
+.io-bubble::before { content: ''; position: absolute; left: -1.4rem; top: 45%; border: .8rem solid transparent; border-right: 1rem solid var(--paper); }
+.io-bubble b { color: var(--gold); }
+
+/* ② 지도 + 사건 경보 */
+.io-map-wrap { position: absolute; inset: 1.5rem 2rem 0; display: flex; align-items: center; justify-content: center; animation: io-zoom 8s ease-out both; }
+.io-map-wrap.dim { animation: none; }
+.io-map-wrap.dim img { filter: brightness(.7); }
+@keyframes io-zoom { from { transform: scale(.85); opacity: 0; } 12% { opacity: 1; } to { transform: scale(1); } }
+.io-map { position: relative; width: min(100%, calc((100vh - 8rem) * 1.923)); aspect-ratio: 3000 / 1560; }
+.io-map img { width: 100%; height: 100%; display: block; }
+.io-alarm { position: absolute; transform: translate(-50%, -50%); opacity: 0; animation: io-alarm .45s cubic-bezier(.3,1.6,.5,1) forwards; }
+@keyframes io-alarm { from { opacity: 0; transform: translate(-50%, -50%) scale(0); } to { opacity: 1; transform: translate(-50%, -50%) scale(1); } }
+.io-alarm .mark { position: relative; z-index: 1; display: grid; place-items: center; width: 3.2rem; height: 3.2rem; border-radius: 50%; background: var(--red); border: .25rem solid #fff; font-size: 2rem; font-weight: 900; box-shadow: 0 .3rem .8rem rgba(0,0,0,.4); }
+.io-alarm .io-ripple { position: absolute; inset: 0; border-radius: 50%; border: .3rem solid var(--red); animation: io-ring 1.4s ease-out infinite; }
+@keyframes io-ring { from { transform: scale(1); opacity: .9; } to { transform: scale(2.6); opacity: 0; } }
+.io-alarm .tag { position: absolute; top: 3.6rem; left: 50%; transform: translateX(-50%); white-space: nowrap; background: var(--kraft); color: var(--navy); font-weight: 800; font-size: 1.1rem; padding: .1rem .6rem; border-radius: .5rem; }
+.io-mascot.small { position: absolute; left: 2rem; bottom: 1rem; width: 9rem; }
+.io-worry { animation: io-shake .5s ease-in-out infinite; }
+@keyframes io-shake { 25% { transform: rotate(-4deg); } 75% { transform: rotate(4deg); } }
+.io-bubble.small { position: absolute; left: 12rem; bottom: 3rem; font-size: 1.6rem; margin: 0; max-width: 34rem; }
+
+/* ③ 편지 */
+.io-letter-at { position: absolute; }
+.io-envelope { position: absolute; left: 0; top: 0; font-size: 5rem; transform: translate(-50%, -50%); animation: io-fly 1.8s cubic-bezier(.4,.1,.3,1) both; }
+@keyframes io-fly {
+  0% { transform: translate(60vw, -40vh) rotate(25deg) scale(.6); }
+  70% { transform: translate(-50%, -50%) rotate(-8deg) scale(1.1); }
+  100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+}
+.io-star { position: absolute; transform: translate(-50%, -50%) scale(0); font-size: 3rem; color: var(--yellow); text-shadow: 0 0 1rem #ffe97a; animation: io-star .6s 1.7s cubic-bezier(.3,1.8,.5,1) forwards, io-glow 1.2s 2.3s ease-in-out infinite alternate; }
+@keyframes io-star { to { transform: translate(-50%, -50%) scale(1.3); } }
+@keyframes io-glow { to { text-shadow: 0 0 2.4rem #ffe97a; } }
+.io-letter {
+  position: absolute; right: 6%; bottom: 10%; width: 30rem;
+  background: var(--paper); color: var(--navy); border-radius: 1rem; padding: 1.4rem 1.8rem;
+  border-top: .8rem solid var(--red); box-shadow: 0 1rem 2rem rgba(0,0,0,.35); transform: rotate(-2deg);
+}
+.io-letter-head { font-size: 1.3rem; font-weight: 800; color: var(--gold); }
+.io-letter-place { margin: .4rem 0; color: var(--muted); font-size: 1.2rem; }
+.io-letter h2 { font-size: 2.2rem; line-height: 1.3; }
+
+/* ④ 수수께끼 */
+.io-riddle { text-align: center; max-width: 64rem; padding: 0 2rem; }
+.io-q { display: inline-grid; place-items: center; width: 8rem; height: 8rem; border-radius: 50%; background: var(--yellow); color: var(--navy); font-size: 6rem; font-weight: 900; animation-name: io-pop, io-wobble; animation-duration: .5s, 2s; animation-delay: 0s, .6s; animation-iteration-count: 1, infinite; animation-fill-mode: forwards, none; }
+@keyframes io-wobble { 50% { transform: rotate(10deg) scale(1.05); } }
+.io-riddle-text { margin-top: 2rem; font-size: 3rem; font-weight: 900; line-height: 1.5; }
+.io-riddle-text span { display: inline-block; opacity: 0; animation: io-word .4s ease-out forwards; }
+@keyframes io-word { from { opacity: 0; transform: translateY(1rem); } to { opacity: 1; transform: none; } }
+.io-riddle-sub { margin-top: 1.6rem; font-size: 1.6rem; color: var(--yellow); font-weight: 700; }
+
+/* ⑤ 출동 */
+.io-final { text-align: center; position: relative; }
+.io-title { font-size: 5rem; font-weight: 900; letter-spacing: .05em; }
+.io-stamp {
+  position: absolute; top: -1.6rem; right: -6rem; transform: rotate(-12deg);
+  border: .4rem solid var(--red); color: var(--red); background: rgba(255,255,255,.9);
+  font-size: 2.2rem; font-weight: 900; padding: .2rem 1.2rem; border-radius: .6rem; letter-spacing: .2em;
+  opacity: 0; animation: io-stamp .35s .6s cubic-bezier(.5,1.8,.5,1) forwards;
+}
+@keyframes io-stamp { from { opacity: 0; transform: rotate(-12deg) scale(3); } to { opacity: 1; transform: rotate(-12deg) scale(1); } }
+.io-goal { margin: 2rem auto 1.6rem; font-size: 1.8rem; background: var(--paper); color: var(--navy); padding: .8rem 1.6rem; border-radius: 1rem; display: inline-block; }
+.io-goal b { background: var(--navy); color: var(--yellow); padding: .1rem .6rem; border-radius: .4rem; margin-right: .5rem; }
+.io-teams { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; max-width: 90rem; margin: 0 auto; }
+.io-team { opacity: 0; animation: io-pop .45s cubic-bezier(.3,1.6,.5,1) forwards; background: var(--kraft); color: var(--navy); font-weight: 800; font-size: 1.5rem; padding: .5rem 1.2rem; border-radius: .8rem; border-top: .4rem solid var(--navy); }
+.io-team.remote { border-top-color: var(--teal); }
+.io-go { margin-top: 1.8rem; font-size: 2.6rem; font-weight: 900; color: var(--yellow); }
+
+/* 조작 막대 */
+.io-ctrl { position: absolute; left: 0; right: 0; bottom: 0; height: 4.5rem; display: flex; align-items: center; justify-content: center; gap: .6rem; background: rgba(0,0,0,.25); }
+.io-ctrl button { min-width: 48px; min-height: 48px; padding: 0 1rem; border-radius: .7rem; border: 2px solid #ffffff55; background: #ffffff18; color: #fff; font-weight: 800; font-size: 1.1rem; }
+.io-ctrl button:hover { background: #ffffff33; }
+.io-ctrl .io-close { position: absolute; right: 1rem; }
+.io-dots { display: flex; gap: .4rem; margin: 0 .6rem; }
+.io-dots span { width: .8rem; height: .8rem; border-radius: 50%; background: #ffffff44; }
+.io-dots span.on { background: var(--yellow); }

@@ -1,0 +1,897 @@
+{
+  "_note": "모든 사실·수치는 2026-10-19 출처 확인 완료. 문구를 임의로 바꾸지 말 것.",
+  "lesson": {
+    "title": "지구촌 사건 파일",
+    "unit": "6학년 2학기 사회 3단원 · 지구촌을 위협하는 여러 가지 문제를 조사해 볼까요 (교과서 143~146쪽)",
+    "goal": "지구촌을 위협하는 문제와 원인을 조사해 봅시다",
+    "minutes": 70
+  },
+  "causes": {
+    "red": {
+      "name": "기후변화",
+      "sub": "지구가 뜨거워져서",
+      "color": "#E63946",
+      "light": "#FDE7E9"
+    },
+    "orange": {
+      "name": "사람의 활동",
+      "sub": "사람이 자연을 바꿔서",
+      "color": "#F08C2E",
+      "light": "#FEF0E1"
+    },
+    "purple": {
+      "name": "전쟁 · 갈등",
+      "sub": "사람끼리 싸워서",
+      "color": "#7A57A6",
+      "light": "#EFE9F7"
+    }
+  },
+  "teams": [
+    {
+      "id": "jeonggok",
+      "name": "정곡초",
+      "school": "정곡초",
+      "members": 5,
+      "caseNo": 6
+    },
+    {
+      "id": "yongdeok",
+      "name": "용덕초",
+      "school": "용덕초",
+      "members": 6,
+      "caseNo": 7
+    },
+    {
+      "id": "uiryeong1",
+      "name": "의령 1모둠",
+      "school": "의령초",
+      "members": 4,
+      "caseNo": 1
+    },
+    {
+      "id": "uiryeong2",
+      "name": "의령 2모둠",
+      "school": "의령초",
+      "members": 4,
+      "caseNo": 2
+    },
+    {
+      "id": "uiryeong3",
+      "name": "의령 3모둠",
+      "school": "의령초",
+      "members": 4,
+      "caseNo": 3
+    },
+    {
+      "id": "uiryeong4",
+      "name": "의령 4모둠",
+      "school": "의령초",
+      "members": 4,
+      "caseNo": 4
+    },
+    {
+      "id": "uiryeong5",
+      "name": "의령 5모둠",
+      "school": "의령초",
+      "members": 4,
+      "caseNo": 5
+    }
+  ],
+  "presentationOrder": [
+    "jeonggok",
+    "yongdeok",
+    "uiryeong1",
+    "uiryeong2",
+    "uiryeong3",
+    "uiryeong4",
+    "uiryeong5"
+  ],
+  "roles": [
+    {
+      "id": "reader",
+      "name": "읽기 대장",
+      "job": "사건 기사를 소리 내어 읽고 🔵 문제 단서 짚기",
+      "minTeam": 4
+    },
+    {
+      "id": "detective",
+      "name": "원인 탐정",
+      "job": "원인 카드 15장 중 범인 1~2장 고르기",
+      "minTeam": 4
+    },
+    {
+      "id": "recorder",
+      "name": "기록관",
+      "job": "웹앱 조작 · 지도에 핀 꽂기",
+      "minTeam": 4
+    },
+    {
+      "id": "presenter",
+      "name": "발표자",
+      "job": "지도 투어 40초 발표",
+      "minTeam": 4
+    },
+    {
+      "id": "linker",
+      "name": "연결 탐정",
+      "job": "연결의 실 담당",
+      "minTeam": 5
+    },
+    {
+      "id": "numbers",
+      "name": "숫자 탐정",
+      "job": "숫자 단서 소개",
+      "minTeam": 6
+    }
+  ],
+  "example": {
+    "no": 0,
+    "title": "소말리아 · 케냐 · 40년 만의 가뭄",
+    "place": "아프리카 동쪽 (소말리아 · 케냐)",
+    "cause": "red",
+    "sentences": [
+      "아프리카 동쪽(소말리아·케냐)에서 40년 만의 심한 가뭄이 일어나고 있다.",
+      "왜냐하면 비가 오지 않는 날이 길어졌기 때문이다.",
+      "이 문제는 물을 구하러 6 km 넘게 걸어야 하는 어린이들에게까지 이어진다."
+    ],
+    "note": "선생님 시범용. 어느 팀의 사건과도 겹치지 않음. 지도에 ★ 핀으로 처음부터 표시."
+  },
+  "cases": [
+    {
+      "no": 1,
+      "title": "하얗게 변해 가는 바닷속 숲",
+      "short": "산호 백화",
+      "place": "오스트레일리아(호주) · 그레이트배리어리프",
+      "icons": [
+        "GiCoral",
+        "GiDoubleFish",
+        "GiThermometerHot"
+      ],
+      "causes": [
+        "red"
+      ],
+      "mainCause": "red",
+      "article": [
+        {
+          "tag": "plain",
+          "text": "오스트레일리아 바다에는 세계에서 가장 큰 산호초인 그레이트배리어리프가 있어요."
+        },
+        {
+          "tag": "problem",
+          "text": "그런데 알록달록하던 산호가 하얗게 변하는 '백화 현상'이 일어나고, 하얗게 변한 산호가 많이 죽고 있어요."
+        },
+        {
+          "tag": "cause",
+          "text": "기후변화로 바닷물이 너무 뜨거워지자, 산호 속에 살며 색과 영양분을 주던 작은 생물이 산호를 떠나 버렸기 때문이에요."
+        },
+        {
+          "tag": "plain",
+          "text": "이런 일은 호주뿐 아니라 세계 곳곳의 바다에서 함께 일어나고 있어요."
+        }
+      ],
+      "numberClue": {
+        "big": "84%",
+        "text": "2023년부터 2025년까지 전 세계 산호초의 84%가 산호를 하얗게 만들 만큼 뜨거운 바닷물을 겪었어요. (83개 나라·지역)"
+      },
+      "link": "산호초는 바다 바닥의 1%밖에 안 되지만, 바다 생물의 약 25%가 산호초에 기대어 살아요. 산호가 죽으면 물고기가 줄어들고, 물고기를 잡아 사는 사람들과 우리 식탁까지 영향을 받아요.",
+      "source": "미국 해양대기청(NOAA), 2025 · 미국 항공우주국(NASA)",
+      "sentenceChoices": {
+        "where": [
+          "오스트레일리아 바다(그레이트배리어리프)",
+          "아프리카 사막",
+          "북극 바다"
+        ],
+        "problem": [
+          "산호가 하얗게 변해 죽는 문제",
+          "물고기가 너무 많아지는 문제",
+          "바닷물이 차가워지는 문제"
+        ],
+        "link": [
+          "물고기를 잡아 사는 사람들과 우리 식탁",
+          "호주 바다에 사는 산호만",
+          "아무에게도 이어지지 않음"
+        ],
+        "note": "첫 번째 항목이 정답. 화면에서는 순서를 섞어 보여 주고, 마지막에 \"✏️ 직접 쓰기\" 칸을 둔다."
+      },
+      "expectedCardIds": [
+        "c2"
+      ],
+      "modelAnswer": [
+        "오스트레일리아 바다에서 산호가 하얗게 변해 죽는 문제가 일어나고 있다.",
+        "바닷물이 너무 뜨거워져서",
+        "물고기와 그 물고기를 먹는 우리 식탁"
+      ]
+    },
+    {
+      "no": 2,
+      "title": "꿀벌이 사라졌다!",
+      "short": "꿀벌 실종",
+      "place": "대한민국 (바로 우리나라!)",
+      "icons": [
+        "GiBee",
+        "GiStrawberry",
+        "FaThermometerFull"
+      ],
+      "causes": [
+        "red",
+        "orange"
+      ],
+      "mainCause": "red",
+      "article": [
+        {
+          "tag": "plain",
+          "text": "2022년 봄, 우리나라 양봉 농가에서 벌통을 열어 보니 꿀벌이 텅 비어 있었어요."
+        },
+        {
+          "tag": "problem",
+          "text": "지난겨울 동안 전국에서 꿀벌 약 78억 마리가 사라진 것으로 추정돼요."
+        },
+        {
+          "tag": "cause",
+          "text": "늦가을과 겨울 날씨가 이상하게 따뜻해서 꿀벌이 꽃을 찾아 밖으로 나갔다가 지쳐 벌통으로 돌아오지 못했고, 꿀벌의 먹이가 되는 아까시나무 같은 꽃나무도 크게 줄었기 때문이라고 해요."
+        },
+        {
+          "tag": "cause",
+          "text": "해충을 없애려고 뿌린 약과 농약도 꿀벌을 약하게 만든다고 해요."
+        }
+      ],
+      "numberClue": {
+        "big": "78억 마리",
+        "text": "2021~2022년 겨울 사이 우리나라에서 사라진 꿀벌 수예요. (전국 양봉 농가 4,173곳 피해)"
+      },
+      "link": "세계 사람들이 많이 먹는 농작물 100가지 중 70가지 넘게 꿀벌이 꽃가루를 옮겨 줘야 열매를 맺어요. 꿀벌이 사라지면 사과·딸기·수박 같은 과일이 줄어들고 값도 올라갈 수 있어요.",
+      "source": "한국양봉협회 조사(2022) · 유엔식량농업기구(FAO)",
+      "sentenceChoices": {
+        "where": [
+          "우리나라(대한민국)",
+          "몽골",
+          "브라질"
+        ],
+        "problem": [
+          "꿀벌 수십억 마리가 사라지는 문제",
+          "꿀벌이 너무 많아지는 문제",
+          "꽃이 너무 많이 피는 문제"
+        ],
+        "link": [
+          "사과·딸기·수박 같은 과일을 먹는 우리",
+          "양봉 농가 사람들만",
+          "아무에게도 이어지지 않음"
+        ],
+        "note": "첫 번째 항목이 정답. 화면에서는 순서를 섞어 보여 주고, 마지막에 \"✏️ 직접 쓰기\" 칸을 둔다."
+      },
+      "expectedCardIds": [
+        "c3",
+        "c11"
+      ],
+      "modelAnswer": [
+        "우리나라에서 꿀벌 수십억 마리가 사라지는 문제가 일어나고 있다.",
+        "겨울이 이상하게 따뜻해서 / 농약을 많이 뿌려서",
+        "과일을 먹는 우리 모두"
+      ]
+    },
+    {
+      "no": 3,
+      "title": "불타는 지구의 허파",
+      "short": "열대 우림 파괴",
+      "place": "브라질 · 아마존 열대 우림",
+      "icons": [
+        "GiForest",
+        "GiFlame",
+        "GiCow"
+      ],
+      "causes": [
+        "orange"
+      ],
+      "mainCause": "orange",
+      "article": [
+        {
+          "tag": "plain",
+          "text": "남아메리카 아마존에는 세계에서 가장 큰 열대 우림이 있어서 '지구의 허파'라고 불려요."
+        },
+        {
+          "tag": "problem",
+          "text": "그런데 이 숲이 아주 빠르게 사라지고 있어요. 2024년에는 불에 타서 없어진 숲이 특히 많았어요."
+        },
+        {
+          "tag": "cause",
+          "text": "사람들이 콩밭과 소 목장을 만들려고 숲을 베고 불을 지르고, 날씨까지 메말라서 불이 더 크게 번졌기 때문이에요."
+        },
+        {
+          "tag": "plain",
+          "text": "2024년 세계에서 사라진 열대 원시림 가운데 42%가 브라질에서 사라졌어요."
+        }
+      ],
+      "numberClue": {
+        "big": "1분에 축구장 18개",
+        "text": "2024년 전 세계 열대 원시림이 1분마다 축구장 18개 넓이만큼 사라졌어요. 거의 절반은 불 때문이었어요."
+      },
+      "link": "숲은 공기 속 탄소를 빨아들여 나무에 저장해요. 숲이 불에 타면 그 탄소가 다시 공기로 나와 지구를 더 뜨겁게 만들어요. 아마존에서 일어난 일이 지구 전체 날씨까지 바꿀 수 있어요.",
+      "source": "세계자원연구소(WRI) 글로벌 포레스트 워치, 2025",
+      "sentenceChoices": {
+        "where": [
+          "브라질 아마존 열대 우림",
+          "오스트레일리아 바다",
+          "몽골 초원"
+        ],
+        "problem": [
+          "열대 우림이 불타 사라지는 문제",
+          "숲이 너무 빨리 자라는 문제",
+          "비가 너무 많이 오는 문제"
+        ],
+        "link": [
+          "지구 전체의 날씨(더 뜨거워짐)",
+          "아마존에 사는 동물들만",
+          "브라질 사람들만"
+        ],
+        "note": "첫 번째 항목이 정답. 화면에서는 순서를 섞어 보여 주고, 마지막에 \"✏️ 직접 쓰기\" 칸을 둔다."
+      },
+      "expectedCardIds": [
+        "c6",
+        "c7"
+      ],
+      "modelAnswer": [
+        "브라질 아마존에서 열대 우림이 불타 사라지는 문제가 일어나고 있다.",
+        "숲을 베고 불을 질러서",
+        "지구 전체의 날씨(더 뜨거워짐)"
+      ]
+    },
+    {
+      "no": 4,
+      "title": "집을 떠나야 하는 아이들",
+      "short": "전쟁 난민",
+      "place": "수단 (아프리카 북동쪽)",
+      "icons": [
+        "GiBackpack",
+        "GiBrokenWall",
+        "GiCampingTent"
+      ],
+      "causes": [
+        "purple"
+      ],
+      "mainCause": "purple",
+      "article": [
+        {
+          "tag": "plain",
+          "text": "아프리카 북동쪽에 있는 수단에서는 2023년부터 나라 안에서 큰 전쟁이 이어지고 있어요."
+        },
+        {
+          "tag": "problem",
+          "text": "집과 학교가 부서지면서 수많은 사람이 살던 곳을 떠나 피란을 가야 했어요. 수단은 세계에서 가장 많은 사람이 집을 잃은 나라 중 하나예요."
+        },
+        {
+          "tag": "cause",
+          "text": "나라를 다스리는 힘을 차지하려고 두 무장 세력이 서로 싸우는 전쟁이 일어났기 때문이에요."
+        },
+        {
+          "tag": "plain",
+          "text": "피란 간 사람들은 물과 먹을거리, 병원이 부족한 곳에서 힘들게 지내고 있어요."
+        }
+      ],
+      "numberClue": {
+        "big": "1억 1,780만 명",
+        "text": "2025년 말, 전쟁과 박해 때문에 집을 떠나야 했던 전 세계 사람 수예요. 우리나라 인구의 2배가 넘어요."
+      },
+      "link": "나라 밖으로 피란 간 사람의 약 3분의 2는 바로 이웃 나라로 가요. 그러면 이웃 나라에서도 물·식량·학교가 모자라게 돼요. 우리나라에도 전쟁을 피해 온 사람들이 도움을 요청하고 있어요.",
+      "source": "유엔난민기구(UNHCR) 글로벌 동향 보고서, 2025 · 2026",
+      "sentenceChoices": {
+        "where": [
+          "수단(아프리카 북동쪽)",
+          "우크라이나",
+          "대한민국"
+        ],
+        "problem": [
+          "전쟁으로 사람들이 집을 잃고 피란을 가는 문제",
+          "사람들이 여행을 많이 떠나는 문제",
+          "학교가 새로 많이 생기는 문제"
+        ],
+        "link": [
+          "이웃 나라 사람들, 그리고 우리나라까지",
+          "수단 사람들만",
+          "아무에게도 이어지지 않음"
+        ],
+        "note": "첫 번째 항목이 정답. 화면에서는 순서를 섞어 보여 주고, 마지막에 \"✏️ 직접 쓰기\" 칸을 둔다."
+      },
+      "expectedCardIds": [
+        "c13",
+        "c15"
+      ],
+      "modelAnswer": [
+        "수단에서 사람들이 집을 잃고 피란을 가는 문제가 일어나고 있다.",
+        "나라 안에서 전쟁이 일어나서",
+        "이웃 나라 사람들, 우리나라까지"
+      ]
+    },
+    {
+      "no": 5,
+      "title": "바다 위 쓰레기 섬",
+      "short": "해양 쓰레기",
+      "place": "북태평양 (하와이와 미국 캘리포니아 사이)",
+      "icons": [
+        "GiSeaTurtle",
+        "GiWaterBottle",
+        "GiFishingNet"
+      ],
+      "causes": [
+        "orange"
+      ],
+      "mainCause": "orange",
+      "article": [
+        {
+          "tag": "plain",
+          "text": "태평양 한가운데에는 바람과 물결을 따라 쓰레기가 빙글빙글 모여드는 곳이 있어요. 사람들은 이곳을 '태평양 쓰레기 섬'이라고 불러요."
+        },
+        {
+          "tag": "problem",
+          "text": "이곳에는 플라스틱 조각이 약 1조 8천억 개나 떠다녀요. 바다거북과 바닷새가 이것을 먹이로 알고 삼키기도 해요."
+        },
+        {
+          "tag": "cause",
+          "text": "사람들이 버린 플라스틱과 바다에 버려진 낡은 그물이 강과 바다를 따라 흘러왔기 때문이에요. 쓰레기 무게의 절반 가까이가 버려진 그물이에요."
+        }
+      ],
+      "numberClue": {
+        "big": "160만 km²",
+        "text": "쓰레기가 모여 있는 넓이예요. 우리나라 넓이의 약 16배나 돼요. (2018년 조사)"
+      },
+      "link": "플라스틱은 아주 작은 조각(미세 플라스틱)으로 부서져 물고기 몸속에 쌓여요. 그 물고기가 다시 우리 식탁에 올라올 수 있어요. 우리나라에서 버린 쓰레기도 바다를 따라 이곳까지 갈 수 있어요.",
+      "source": "디 오션 클린업(The Ocean Cleanup) 연구, 2018",
+      "sentenceChoices": {
+        "where": [
+          "북태평양(하와이와 캘리포니아 사이)",
+          "인도양",
+          "지중해"
+        ],
+        "problem": [
+          "플라스틱 쓰레기가 섬처럼 모여 떠다니는 문제",
+          "바닷물이 줄어드는 문제",
+          "물고기가 너무 많아지는 문제"
+        ],
+        "link": [
+          "물고기를 먹는 우리 식탁",
+          "태평양에 사는 바닷새들만",
+          "아무에게도 이어지지 않음"
+        ],
+        "note": "첫 번째 항목이 정답. 화면에서는 순서를 섞어 보여 주고, 마지막에 \"✏️ 직접 쓰기\" 칸을 둔다."
+      },
+      "expectedCardIds": [
+        "c9",
+        "c10"
+      ],
+      "modelAnswer": [
+        "태평양 한가운데에 플라스틱 쓰레기가 모여 섬처럼 떠다니는 문제가 일어나고 있다.",
+        "플라스틱을 함부로 버려서 / 낡은 그물을 바다에 버려서",
+        "물고기를 먹는 우리 식탁"
+      ]
+    },
+    {
+      "no": 6,
+      "title": "하늘을 덮는 누런 모래바람",
+      "short": "사막화 · 황사",
+      "place": "몽골 · 고비 사막 주변",
+      "icons": [
+        "GiDesert",
+        "GiSheep",
+        "FaWind"
+      ],
+      "causes": [
+        "orange",
+        "red"
+      ],
+      "mainCause": "orange",
+      "article": [
+        {
+          "tag": "plain",
+          "text": "우리나라 북서쪽에 있는 몽골은 넓은 초원에서 가축을 기르며 살아온 나라예요."
+        },
+        {
+          "tag": "problem",
+          "text": "그런데 초원이 점점 모래땅으로 바뀌는 '사막화'가 빠르게 일어나고 있어요. 1990년에는 나라 땅의 약 40%였던 사막화 땅이 2020년에는 76.9%까지 늘었어요."
+        },
+        {
+          "tag": "cause",
+          "text": "지난 30년 동안 가축 수가 2배 넘게 늘어나 풀을 뿌리까지 먹어 치웠고,"
+        },
+        {
+          "tag": "cause",
+          "text": "기후변화로 기온이 오르고 비는 줄어 땅이 더 메말랐기 때문이에요."
+        }
+      ],
+      "numberClue": {
+        "big": "76.9%",
+        "text": "2020년, 몽골 땅 가운데 사막화된 땅의 비율이에요. 30년 만에 거의 2배가 됐어요."
+      },
+      "link": "메마른 땅의 흙먼지는 바람을 타고 날아가요. 우리나라에 오는 황사의 약 81%가 고비 사막과 내몽골에서 시작돼요. 몽골의 사막화가 우리 학교 운동장의 미세먼지까지 이어지는 거예요.",
+      "source": "몽골 자연환경관광부(2020) · 국립기상과학원(2020) · 기후현실프로젝트",
+      "sentenceChoices": {
+        "where": [
+          "몽골(고비 사막 주변)",
+          "브라질",
+          "오스트레일리아"
+        ],
+        "problem": [
+          "초원이 모래땅으로 바뀌는 사막화",
+          "초원에 나무가 너무 많아지는 문제",
+          "비가 너무 많이 오는 문제"
+        ],
+        "link": [
+          "황사를 맞는 우리나라 사람들",
+          "몽골의 양과 염소들만",
+          "아무에게도 이어지지 않음"
+        ],
+        "note": "첫 번째 항목이 정답. 화면에서는 순서를 섞어 보여 주고, 마지막에 \"✏️ 직접 쓰기\" 칸을 둔다."
+      },
+      "expectedCardIds": [
+        "c8",
+        "c4"
+      ],
+      "modelAnswer": [
+        "몽골에서 초원이 모래땅으로 바뀌는 사막화가 일어나고 있다.",
+        "가축을 너무 많이 풀어 먹여서 / 땅이 메말라서",
+        "황사를 맞는 우리나라 사람들"
+      ]
+    },
+    {
+      "no": 7,
+      "title": "빵 값이 오른 진짜 이유",
+      "short": "전쟁과 식량",
+      "place": "우크라이나 (유럽 동쪽)",
+      "icons": [
+        "GiWheat",
+        "GiBrokenWall",
+        "GiBread"
+      ],
+      "causes": [
+        "purple"
+      ],
+      "mainCause": "purple",
+      "article": [
+        {
+          "tag": "plain",
+          "text": "우크라이나는 넓은 밀밭이 있어 '유럽의 빵 바구니'라고 불리는 나라예요."
+        },
+        {
+          "tag": "cause",
+          "text": "2022년 러시아가 우크라이나를 침공하면서 두 나라 사이에 전쟁이 시작되었어요."
+        },
+        {
+          "tag": "problem",
+          "text": "전쟁으로 밀밭과 항구가 위험해지자 밀을 다른 나라로 보내기 어려워졌고, 세계의 곡물 값이 크게 올랐어요."
+        },
+        {
+          "tag": "plain",
+          "text": "2022년 3월, 세계 식량 가격은 유엔이 기록을 시작한 뒤로 가장 높았어요."
+        }
+      ],
+      "numberClue": {
+        "big": "30%",
+        "text": "전쟁 전, 세계에서 수출되는 밀의 약 30%가 러시아와 우크라이나에서 나왔어요."
+      },
+      "link": "아프리카 동쪽 소말리아는 밀의 90% 넘게를 두 나라에서 사 왔어요. 가뭄에 밀 값까지 올라 굶는 사람이 더 늘었어요. 세계 밀 값이 오르면 밀가루로 만드는 우리 빵 · 라면 값도 오를 수 있어요.",
+      "source": "유엔식량농업기구(FAO) 식량가격지수(2022) · NPR · 코다 스토리(2023)",
+      "sentenceChoices": {
+        "where": [
+          "우크라이나(유럽 동쪽)",
+          "수단",
+          "대한민국"
+        ],
+        "problem": [
+          "전쟁 때문에 밀을 다른 나라로 보내지 못하는 문제",
+          "밀이 너무 많이 남는 문제",
+          "빵 공장이 늘어나는 문제"
+        ],
+        "link": [
+          "소말리아 사람들과 빵·라면을 먹는 우리",
+          "우크라이나 농부들만",
+          "아무에게도 이어지지 않음"
+        ],
+        "note": "첫 번째 항목이 정답. 화면에서는 순서를 섞어 보여 주고, 마지막에 \"✏️ 직접 쓰기\" 칸을 둔다."
+      },
+      "expectedCardIds": [
+        "c14"
+      ],
+      "modelAnswer": [
+        "우크라이나에서 전쟁 때문에 밀을 다른 나라로 보내지 못하는 문제가 일어나고 있다.",
+        "나라와 나라 사이에 전쟁이 일어나서",
+        "소말리아 사람들, 빵을 먹는 우리"
+      ]
+    }
+  ],
+  "causeCards": [
+    {
+      "id": "c1",
+      "cause": "red",
+      "text": "비가 오지 않는 날이 길어져서",
+      "icon": "FaSun"
+    },
+    {
+      "id": "c2",
+      "cause": "red",
+      "text": "바닷물이 너무 뜨거워져서",
+      "icon": "GiThermometerHot"
+    },
+    {
+      "id": "c3",
+      "cause": "red",
+      "text": "겨울이 이상하게 따뜻해서",
+      "icon": "FaThermometerFull"
+    },
+    {
+      "id": "c4",
+      "cause": "red",
+      "text": "기온이 올라 땅이 메말라서",
+      "icon": "GiDesert"
+    },
+    {
+      "id": "c5",
+      "cause": "red",
+      "text": "무더위(폭염)가 심해져서",
+      "icon": "GiSunrise"
+    },
+    {
+      "id": "c6",
+      "cause": "orange",
+      "text": "숲을 베고 불을 질러서",
+      "icon": "GiFlame"
+    },
+    {
+      "id": "c7",
+      "cause": "orange",
+      "text": "농장 · 목장을 넓히려고",
+      "icon": "GiCow"
+    },
+    {
+      "id": "c8",
+      "cause": "orange",
+      "text": "가축을 너무 많이 풀어 먹여서",
+      "icon": "GiSheep"
+    },
+    {
+      "id": "c9",
+      "cause": "orange",
+      "text": "플라스틱을 함부로 버려서",
+      "icon": "GiWaterBottle"
+    },
+    {
+      "id": "c10",
+      "cause": "orange",
+      "text": "낡은 그물을 바다에 버려서",
+      "icon": "GiFishingNet"
+    },
+    {
+      "id": "c11",
+      "cause": "orange",
+      "text": "농약을 많이 뿌려서",
+      "icon": "GiSpray"
+    },
+    {
+      "id": "c12",
+      "cause": "orange",
+      "text": "석탄 · 석유를 태워 탄소를 많이 내서",
+      "icon": "FaIndustry"
+    },
+    {
+      "id": "c13",
+      "cause": "purple",
+      "text": "나라 안에서 전쟁이 일어나서",
+      "icon": "GiBrokenWall"
+    },
+    {
+      "id": "c14",
+      "cause": "purple",
+      "text": "나라와 나라 사이에 전쟁이 일어나서",
+      "icon": "FaFlag"
+    },
+    {
+      "id": "c15",
+      "cause": "purple",
+      "text": "서로 힘을 차지하려고 싸워서",
+      "icon": "FaUsers"
+    }
+  ],
+  "sentenceFrame": [
+    "(어디)에서 (어떤 문제)가 일어나고 있다.",
+    "왜냐하면 (원인 카드) 때문이다.",
+    "이 문제는 (누구·무엇)에게까지 이어진다."
+  ],
+  "linkWords": [
+    "탄소",
+    "바다",
+    "먹을거리",
+    "바람",
+    "이웃 나라",
+    "우리나라"
+  ],
+  "expectedLinks": [
+    {
+      "from": 7,
+      "to": 0,
+      "word": "먹을거리",
+      "reason": "소말리아는 밀의 90% 넘게를 우크라이나·러시아에서 사 왔다",
+      "crossSchool": true
+    },
+    {
+      "from": 6,
+      "to": 2,
+      "word": "우리나라",
+      "reason": "황사도 꿀벌도 우리나라로 이어진다",
+      "crossSchool": true
+    },
+    {
+      "from": 3,
+      "to": 1,
+      "word": "탄소",
+      "reason": "숲이 타서 나온 탄소 → 지구가 뜨거워짐 → 바다가 뜨거워짐",
+      "crossSchool": false
+    },
+    {
+      "from": 3,
+      "to": 0,
+      "word": "탄소",
+      "reason": "탄소 → 기후변화 → 비가 오지 않음",
+      "crossSchool": false
+    },
+    {
+      "from": 5,
+      "to": 1,
+      "word": "바다",
+      "reason": "쓰레기와 뜨거운 바다가 바다 생물을 이중으로 위협",
+      "crossSchool": false
+    },
+    {
+      "from": 4,
+      "to": 7,
+      "word": "이웃 나라",
+      "reason": "둘 다 전쟁 → 그 나라를 넘어 이웃 나라·식량을 사는 나라까지",
+      "crossSchool": true
+    },
+    {
+      "from": 6,
+      "to": 3,
+      "word": "먹을거리",
+      "reason": "가축·목장을 늘려 땅이 망가진다",
+      "crossSchool": true
+    }
+  ],
+  "riddle": {
+    "question": "우리 나라는 탄소를 적게 내는데, 왜 이런 일을 겪는 걸까?",
+    "clues": [
+      {
+        "title": "단서 1 · 탄소",
+        "cause": "red",
+        "text": "다른 곳에서 낸 탄소도 지구 전체를 뜨겁게 해서 비가 오지 않아요."
+      },
+      {
+        "title": "단서 2 · 전쟁 (No.7)",
+        "cause": "purple",
+        "text": "멀리 우크라이나의 전쟁으로 밀 값이 올라 더 굶주리게 됐어요."
+      }
+    ],
+    "conclusion": "지구촌 문제는 한 나라만의 문제가 아니에요. 그래서 함께 관심을 갖고 해결해야 해요."
+  },
+  "oxQuiz": [
+    {
+      "q": "지구촌 문제는 문제가 발생한 나라에만 영향을 준다.",
+      "a": "X",
+      "explain": "다른 나라에도 영향을 줘요. 몽골 황사 → 우리 하늘, 우크라이나 전쟁 → 소말리아 식탁"
+    },
+    {
+      "q": "지구촌에서 어떤 문제가 나타나고 있으며, ( ㅇㅇ )은/는 무엇인지 관심을 기울여야 한다.",
+      "a": "원인",
+      "explain": "원인까지 찾아야 해결 방법도 찾을 수 있어요."
+    }
+  ],
+  "timeline": [
+    {
+      "from": 0,
+      "to": 8,
+      "phase": "intro",
+      "label": "도입 · 인사 · 편지 · 퀴즈 · 수수께끼"
+    },
+    {
+      "from": 8,
+      "to": 14,
+      "phase": "guide",
+      "label": "활동 안내 · 역할 · 문장 틀 시범"
+    },
+    {
+      "from": 14,
+      "to": 34,
+      "phase": "investigate",
+      "label": "활동 1 · 사건 수사 20분",
+      "steps": [
+        {
+          "min": 5,
+          "label": "① 기사 읽기"
+        },
+        {
+          "min": 4,
+          "label": "② 원인 카드"
+        },
+        {
+          "min": 5,
+          "label": "③ 문장 틀"
+        },
+        {
+          "min": 6,
+          "label": "④ 핀 꽂기 · 발표 연습"
+        }
+      ]
+    },
+    {
+      "from": 34,
+      "to": 44,
+      "phase": "tour",
+      "label": "활동 2 · 지도 투어 (팀당 40초)"
+    },
+    {
+      "from": 44,
+      "to": 48,
+      "phase": "colors",
+      "label": "활동 2 · 색깔 발견"
+    },
+    {
+      "from": 48,
+      "to": 57,
+      "phase": "links",
+      "label": "활동 3 · 연결의 실"
+    },
+    {
+      "from": 57,
+      "to": 70,
+      "phase": "wrap",
+      "label": "정리 · 수수께끼 · O/X · 한마디"
+    }
+  ],
+  "sources": [
+    {
+      "case": 1,
+      "title": "NOAA — World’s Fourth Mass Coral Bleaching Event Likely Ended in 2025",
+      "url": "https://www.nesdis.noaa.gov/news/worlds-fourth-mass-coral-bleaching-event-likely-ended-2025"
+    },
+    {
+      "case": 1,
+      "title": "NASA — What is a Coral Reef?",
+      "url": "https://www.nasa.gov/general/what-is-a-coral-reef"
+    },
+    {
+      "case": 2,
+      "title": "세계일보 — 지난 겨울 이상 기온으로 꿀벌 78억마리 폐사",
+      "url": "https://www.segye.com/view/20220614526111"
+    },
+    {
+      "case": 3,
+      "title": "WRI — Global Forest Loss Shatters Records in 2024",
+      "url": "https://wri.org/news/release-global-forest-loss-shatters-records-2024-fueled-massive-fires"
+    },
+    {
+      "case": 4,
+      "title": "AMES News — UNHCR Global Trends 2026",
+      "url": "https://amesnews.com.au/lead-story/human-displacement-remains-at-record-levels-unhcr-report/"
+    },
+    {
+      "case": 5,
+      "title": "Wikipedia — Great Pacific Garbage Patch",
+      "url": "https://en.wikipedia.org/wiki/Great_Pacific_Garbage_Patch"
+    },
+    {
+      "case": 6,
+      "title": "노컷뉴스 — 황사 발원지 (국립기상과학원 81%, 몽골 사막화 76.9%)",
+      "url": "https://www.nocutnews.co.kr/news/5928159"
+    },
+    {
+      "case": 6,
+      "title": "Climate Reality Project — Mongolia",
+      "url": "https://www.climaterealityproject.org/blog/how-climate-crisis-impacting-mongolia"
+    },
+    {
+      "case": 7,
+      "title": "NPR — Global food prices record high (FAO)",
+      "url": "https://www.npr.org/2022/04/08/1091705608/global-food-prices-record-high-ukraine-war"
+    },
+    {
+      "case": 7,
+      "title": "Coda Story — Somalia wheat",
+      "url": "https://www.codastory.com/newsletters/somalia-drought-ukraine-war/"
+    }
+  ]
+}
